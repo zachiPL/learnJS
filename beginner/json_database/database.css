@@ -1,0 +1,24 @@
+body {
+    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #dedede;
+}
+
+#list {
+    display: inline-block;
+    margin: auto;
+    border: 1px solid #666;
+    padding: 10px;
+    /* wow ... we can do that! */
+    a {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+#display {
+    display: inline-block;
+    border: 1px solid #666;
+    padding: 10px;
+}
