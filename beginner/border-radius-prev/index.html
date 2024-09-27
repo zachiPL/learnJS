@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title></title>
   <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
   <div id="box"></div>
-  <div style = "background-color: lightblue; margin:auto; text-align: center;">
-  <div>
-    <div class = "i">top-left</div>
-    <div class = "i">top-right</div>
-    <div class = "i">bottom-left</div>
-    <div class = "i">bottom-right</div>
-  </div>
-  <div>
-    <input class = "i" type="range" min="0" max="100" id="x1" value = 10 />
-    <input class = "i" type="range" min="0" max="100" id="x2" value = 10 />
-    <input class = "i" type="range" min="0" max="100" id="x3" value = 10 />
-    <input class = "i" type="range" min="0" max="100" id="x4" value = 10 />
-  </div>
-  <div>
-    <input class = "i" type="range" min="0" max="100" id="y1" value = 10 />
-    <input class = "i" type="range" min="0" max="100" id="y2" value = 10 />
-    <input class = "i" type="range" min="0" max="100" id="y3" value = 10 />
-    <input class = "i" type="range" min="0" max="100" id="y4" value = 10 />
-  </div>
+  <div style="background-color: lightblue; margin:auto; text-align: center;">
+    <div class="col">
+      <div>top-left</div>
+      <input type="range" min="0" max="100" id="x1" value=10 />
+      <input type="range" min="0" max="100" id="y1" value=10 />
+    </div>
+    <div class="col">
+      <div>top-right</div>
+      <input type="range" min="0" max="100" id="x2" value=10 />
+      <input type="range" min="0" max="100" id="y2" value=10 />
+    </div>
+    <div class="col">
+      <div>bottom-left</div>
+      <input type="range" min="0" max="100" id="x3" value=10 />
+      <input type="range" min="0" max="100" id="y3" value=10 />
+    </div>
+    <div class="col">
+      <div>bottom-right</div>
+      <input type="range" min="0" max="100" id="x4" value=10 />
+      <input type="range" min="0" max="100" id="y4" value=10 />
+    </div>
   </div>
   <script src="code.js"></script>
-  <code>
-    // Todo: Fix divs positions on small screens (learn how)
-  </code>
 </body>
+
 </html>

@@ -1,9 +1,9 @@
 * {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-variant: small-caps;
 }
-#box
-{
+
+#box {
     margin: auto;
     margin-bottom: 30px;
     margin-top: 100px;
@@ -15,14 +15,17 @@
     border-width: 4px;
     vertical-align: middle;
 }
-.i
-{
-    width: 200px;
-    display:inline-block;
-    text-align: center;
+
+.col {
+    display: inline-block;
 }
 
-code
-{
+.col input {
+    width: 200px;
+    text-align: center;
+    display: block;
+}
+
+code {
     color: darkgray;
 }

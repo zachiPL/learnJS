@@ -12,7 +12,6 @@ var y3 = document.getElementById('y3');
 var x4 = document.getElementById('x4');
 var y4 = document.getElementById('y4');
 
-
 x1.addEventListener("input", updateElement);
 x2.addEventListener("input", updateElement);
 x3.addEventListener("input", updateElement);
