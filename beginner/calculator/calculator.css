@@ -1,0 +1,58 @@
+* {
+    border-radius: 10px;
+}
+
+#calculatorBox {
+    border: solid black 1px;
+    border-radius: 10px;
+    margin: 30px auto 30px auto;
+    padding: 8px;
+    width: 200px;
+    min-height: 200px;
+    background-color: gray;
+}
+
+#cipherField {
+    border: 1px solid burlywood;
+    background-color: beige;
+    margin: auto;
+    margin-bottom: 8px;
+    font-family: monospace;
+    text-align: right;
+    font-size: 3em;
+    color: darkgreen;
+}
+
+#buttonsBox {
+    display: table;
+    margin: auto;
+    width: inherit;
+    height: inherit;
+    border-spacing: .15em;
+}
+
+.divRow {
+    display: table-row;
+    width: max-content;
+}
+
+.divCell {
+    display: table-cell;
+    border: 1px solid beige;
+    width: 25%;
+    text-align: center;
+    font-size: 1.4em;
+    font-family: monospace;
+    vertical-align: middle;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    cursor: pointer;
+    background-color: lightgray;
+    user-select: none;
+}
+
+.explanation {
+    font-family: sans-serif;
+    margin: auto;
+    text-align:center;
+}
