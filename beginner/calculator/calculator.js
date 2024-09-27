@@ -1,60 +1,75 @@
 const buttons = document.getElementsByClassName("divCell");
 const displayElement = document.getElementById("cipherField");
 let func = function (x, y) { return y };
-let accumulator = 0;
+let lastResult = 0;
 let display = 0;
 let argument = 0;
+let clear = false;
 
 function handleClickNumber(number) {
+    if (clear)
+        display = 0;
     if (display > 10000000)
         return;
 
     display *= 10;
     display += parseInt(number);
     argument = display;
+    clear = false;
     updateDisplay();
 }
 
 function plus() {
-    func = (x, y) => { return x + y};
-    postSignClick();
+    if (!clear)
+        result();
+    func = (x, y) => { return x + y };
 }
 
 function minus() {
-    func = (x, y) => { return x - y};
-    postSignClick();
+    if (!clear)
+        result();
+    func = (x, y) => { return x - y };
 }
 
 function multiply() {
-    func = (x, y) => { return x * y};
-    postSignClick();
+    if (!clear)
+        result();
+    func = (x, y) => { return x * y };
 }
 
 function divide() {
-    func = (x, y) => { return x / y};
-    postSignClick();
+    if (!clear)
+        result();
+    func = (x, y) => { return x / y };
 }
 
-function postSignClick()
-{
-    accumulator = display;
-    display = 0;
-    updateDisplay();
-}
-
-function result()
-{
-    display = func(accumulator, argument);
-    accumulator = display;
+function result() {
+    clear = true;
+    lastResult = func(lastResult, argument);
+    if(lastResult > 99999999)
+        display = "ERR"
+    else
+        display = lastResult;
     updateDisplay();
 }
 
 function ac() {
-    accumulator = 0;
+    lastResult = 0;
     display = 0;
     argument = 0;
     updateDisplay();
-    func = (x, y) => { y };
+    func = (x, y) => { return y };
+}
+
+function c() {
+    display = 0;
+    updateDisplay();
+}
+
+function pm() {
+    display = -display;
+    argument = display;
+    updateDisplay();
 }
 
 function updateDisplay() {
@@ -76,7 +91,7 @@ for (var i = 0; i < buttons.length; i++) {
             case '*':
                 btn.addEventListener('click', (x) => multiply());
                 break;
-            case '&div;':
+            case '/':
                 btn.addEventListener('click', (x) => divide());
                 break;
             case '=':
@@ -85,6 +100,13 @@ for (var i = 0; i < buttons.length; i++) {
             case 'AC':
                 btn.addEventListener('click', (x) => ac());
                 break;
+            case 'C':
+                btn.addEventListener('click', (x) => c());
+                break;
+            case '+/-':
+                btn.addEventListener('click', (x) => pm());
+                break;
+
         }
     }
     btn.addEventListener("pointerdown", (z) => {

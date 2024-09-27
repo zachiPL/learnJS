@@ -50,3 +50,9 @@
     background-color: lightgray;
     user-select: none;
 }
+
+.explanation {
+    font-family: sans-serif;
+    margin: auto;
+    text-align:center;
+}
