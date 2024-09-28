@@ -35,15 +35,33 @@ body {
     border: 1px solid #666;
     padding: 10px;
 
-    div {
+    p {
         padding: .4em;
+        margin: 0px;
     }
 
-    div:nth-child(odd) {
+    p:nth-child(odd) {
         background-color: #222;
     }
 
-    div:nth-child(even) {
+    p:nth-child(even) {
         background-color: #111;
     }
+}
+
+#explanation {
+    display: block;
+    width: 80%;
+    margin:auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: moccasin;
+    color: darkslategray;
+    padding: .5em;
+    border: 1px solid orange;
+    a { color: orangered;}
+}
+
+div {
+    border-radius: 1em;
 }

@@ -8,6 +8,10 @@
 </head>
 
 <body>
+    <div id="explanation">
+        Idea for this excercise taken from <a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Cause-Effect-App.md">here</a><br/>
+        But instead using some boring data I asked chatgpt to generate json file with Pokemon games data. It's in <a href="pokemon_games_with_starters.js">separate file</a>. You're welcome.
+    </div>
     <div id="list">
         <a href="#" onclick="display(1)"> something something</a>
         <a href=""> something something</a>
@@ -16,15 +20,13 @@
         <a href=""> something something</a>
     </div>
     <div id="display">
-        <div>Title: <span id="title"></span></div>
-        <div>Released: <span id="released"></span></div>
-        <div>Platform: <span id="platrofm"></span></div>
-        <div>Starters: <span id="starters"></span></div>
+        <p>Title: <span id="title"></span></p>
+        <p>Released: <span id="released"></span></p>
+        <p>Platform: <span id="platrofm"></span></p>
+        <p>Starters: <span id="starters"></span></p>
 
     </div>
-    <div id="explanation">
-
-    </div>
+    
     <script src="pokemon_games_with_starters.js"></script>
     <script src="database.js"></script>
 </body>
