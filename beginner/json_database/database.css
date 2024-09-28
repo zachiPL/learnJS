@@ -9,16 +9,41 @@ body {
     margin: auto;
     border: 1px solid #666;
     padding: 10px;
+
     /* wow ... we can do that! */
     a {
         display: block;
         color: white;
         text-decoration: none;
+        padding: .4em;
+    }
+
+    a:nth-child(odd) {
+        background-color: #222
+    }
+
+    a:nth-child(even) {
+        background-color: #111;
     }
 }
 
 #display {
+    vertical-align: top;
+    min-width: 400px;
     display: inline-block;
+    background-color: #383838;
     border: 1px solid #666;
     padding: 10px;
+
+    div {
+        padding: .4em;
+    }
+
+    div:nth-child(odd) {
+        background-color: #222;
+    }
+
+    div:nth-child(even) {
+        background-color: #111;
+    }
 }

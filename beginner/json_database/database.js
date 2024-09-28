@@ -11,10 +11,11 @@ function display(id)
     title.innerText = record.title;
     released.innerText = record.release_date;
     platform.innerText = record.platform;
-    var stString = '';
-    for(var i = 0; i < record.starters.length; i++)
-        stString += record.starters[i].name + "<br>";
-    starters.innerHTML = stString;
+    let starterNamesArr = [];
+    record.starters.forEach(element => {
+        starterNamesArr.push(element.name);
+    });
+    starters.innerHTML = starterNamesArr.join(', ');
 }
 
 let links = "";
